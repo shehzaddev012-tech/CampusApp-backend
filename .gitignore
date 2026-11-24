@@ -1,0 +1,11 @@
+node_modules
+dist
+.env
+.env.*
+!.env.example
+.pgpass.local
+*.log
+service-account*.json
+firebase-service-account*
+uploads/
+.tools/

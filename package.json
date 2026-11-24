@@ -1,0 +1,46 @@
+{
+  "name": "campushub-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "migrate": "tsx src/db/migrate.ts",
+    "seed": "tsx src/db/seed.ts",
+    "seed:study": "tsx src/db/seedStudy.ts",
+    "create-user": "tsx src/db/createUser.ts",
+    "db:create": "tsx src/db/create.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.4.3",
+    "@fastify/helmet": "^13.2.0",
+    "@fastify/multipart": "^10.1.9",
+    "@fastify/rate-limit": "^11.2.2",
+    "@fastify/websocket": "11.3.7",
+    "dotenv": "^18.0.10",
+    "fastify": "^5.12.8",
+    "firebase-admin": "^14.5.1",
+    "jose": "^6.2.18",
+    "nodemailer": "^10.6.0",
+    "pg": "^8.23.1",
+    "sharp": "^0.35.5",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/nodemailer": "^8.0.2",
+    "@types/pg": "^8.23.1",
+    "@types/ws": "8.18.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  }
+}
